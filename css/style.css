@@ -51,6 +51,24 @@ section {
   color: hsl(186deg, 14%, 43%);
 }
 
+.heading-and-error-container {
+  display: flex;
+  align-items: center;
+}
+.heading-and-error-container .no-people-error {
+  font-size: 16px;
+  margin-left: auto;
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  border-color: red;
+}
+
 .input-container {
   position: relative;
 }
@@ -91,6 +109,7 @@ section {
   width: 146px;
   border: none;
   border-radius: 5px;
+  height: 48px;
   cursor: pointer;
   background: hsl(183deg, 100%, 15%);
   color: hsl(0deg, 0%, 100%);
@@ -102,6 +121,7 @@ section {
   width: 146px;
   border: none;
   border-radius: 5px;
+  height: 48px;
   height: 48px;
   background: hsl(189deg, 41%, 97%);
   text-align: right;
@@ -118,6 +138,9 @@ section {
 }
 .select-tip-container input:hover {
   border: 1px solid hsl(172deg, 67%, 45%);
+}
+.select-tip-container .selected {
+  background: hsl(172deg, 61%, 77%);
 }
 
 .result-container {
@@ -151,15 +174,14 @@ section {
 }
 .result-container .btn-reset {
   cursor: pointer;
-  justify-self: flex-end;
   width: 146px;
   border: none;
   border-radius: 5px;
+  height: 48px;
   width: 100%;
   color: hsl(183deg, 100%, 15%);
   background: hsl(172deg, 67%, 45%);
   text-transform: uppercase;
-  padding: 0.5em;
 }
 .result-container .btn-reset:hover {
   background: hsl(172deg, 61%, 77%);

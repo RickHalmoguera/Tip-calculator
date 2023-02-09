@@ -16,6 +16,7 @@ $white:hsl(0, 0%, 100%);
     width: 146px;
     border: none;
     border-radius: 5px;
+    height: 48px;
 }
 
 *{
@@ -37,7 +38,6 @@ body{
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    
 }
 
 
@@ -72,6 +72,24 @@ section{
     font-size: 16px;
     color: $darkGrayishCyan;
 }
+
+.heading-and-error-container{
+    display: flex;
+    align-items: center;
+    .no-people-error{
+        font-size: 16px;
+        margin-left: auto;
+        color: red;
+    }
+}
+
+.hidden{
+    display: none;
+}
+.error{
+    border-color: red;
+}
+
 
 .input-container{
     position: relative;
@@ -144,7 +162,12 @@ section{
         }
     }
 
+    .selected{
+        background: $hover;
+    }
+
 }
+
 
 
 .result-container{
@@ -183,14 +206,11 @@ section{
 
     .btn-reset{
         cursor: pointer;
-        justify-self: flex-end;
         @include btn-style();
         width:100%;
-        
         color: $veryDarkCyan;
         background: $strongCyan;
         text-transform: uppercase;
-        padding: .5em;
 
         &:hover{
             background: $hover;
