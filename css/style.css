@@ -15,6 +15,11 @@ body {
   align-items: center;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 header {
   padding: 2em;
 }
@@ -61,6 +66,9 @@ section {
   border: none;
   border-radius: 5px;
   padding: 0.2em 0.5em;
+  height: 48px;
+  color: hsl(184deg, 14%, 56%);
+  text-align: right;
 }
 .input-container .input-field::-moz-placeholder {
   text-align: right;
@@ -69,6 +77,9 @@ section {
 .input-container .input-field::placeholder {
   text-align: right;
   color: hsl(184deg, 14%, 56%);
+}
+.input-container .input-field:hover {
+  border: 1px solid hsl(172deg, 67%, 45%);
 }
 
 .select-tip-container .btns-container {
@@ -84,17 +95,29 @@ section {
   background: hsl(183deg, 100%, 15%);
   color: hsl(0deg, 0%, 100%);
 }
+.select-tip-container .btn:hover {
+  background: hsl(172deg, 61%, 77%);
+}
 .select-tip-container input {
   width: 146px;
   border: none;
   border-radius: 5px;
+  height: 48px;
   background: hsl(189deg, 41%, 97%);
+  text-align: right;
+  color: hsl(184deg, 14%, 56%);
+  padding-right: 0.5em;
 }
 .select-tip-container input::-moz-placeholder {
   color: hsl(184deg, 14%, 56%);
+  text-align: center;
 }
 .select-tip-container input::placeholder {
   color: hsl(184deg, 14%, 56%);
+  text-align: center;
+}
+.select-tip-container input:hover {
+  border: 1px solid hsl(172deg, 67%, 45%);
 }
 
 .result-container {
@@ -127,6 +150,7 @@ section {
   color: hsl(172deg, 67%, 45%);
 }
 .result-container .btn-reset {
+  cursor: pointer;
   justify-self: flex-end;
   width: 146px;
   border: none;
@@ -136,4 +160,7 @@ section {
   background: hsl(172deg, 67%, 45%);
   text-transform: uppercase;
   padding: 0.5em;
+}
+.result-container .btn-reset:hover {
+  background: hsl(172deg, 61%, 77%);
 }/*# sourceMappingURL=style.css.map */

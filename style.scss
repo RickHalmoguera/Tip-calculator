@@ -9,6 +9,7 @@ $grayishCyan:hsl(184, 14%, 56%);
 $lightGrayishCyan: hsl(185, 41%, 84%);
 $veryLightGrayishCyan: hsl(189, 41%, 97%);
 $strongCyan: hsl(172, 67%, 45%);
+$hover:hsl(172,61%,77%);
 $white:hsl(0, 0%, 100%);
 
 @mixin btn-style{
@@ -33,6 +34,13 @@ body{
     align-items: center;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    
+}
+
+
 header{
     padding: 2em;
 }
@@ -52,9 +60,9 @@ main{
         .info-container,.display-result-container {
             width: 50%;
         }
-        
     }
 }
+
 
 section{
     margin-bottom: 1em;
@@ -82,10 +90,21 @@ section{
         border: none;
         border-radius: 5px;
         padding: .2em .5em;
+        height: 48px;
+        color: $grayishCyan;
+        text-align: right;
+        
+        
+            
 
         &::placeholder{
             text-align: right;
             color: $grayishCyan;
+            
+        }
+
+        &:hover{
+            border: 1px solid $strongCyan;
         }
     }
 }
@@ -102,16 +121,29 @@ section{
         cursor: pointer;
         background: $veryDarkCyan;
         color: $white;
-    }
 
-    input{
+        &:hover{
+            background: $hover;
+        }
+    }input{
         @include btn-style();
+        height: 48px;
         background: $veryLightGrayishCyan;
+        text-align: right;
+        color: $grayishCyan;
+        padding-right: .5em;
+        
         
         &::placeholder{
             color: $grayishCyan;
+            text-align: center;
+        }
+
+        &:hover{
+            border: 1px solid $strongCyan;
         }
     }
+
 }
 
 
@@ -150,6 +182,7 @@ section{
     }
 
     .btn-reset{
+        cursor: pointer;
         justify-self: flex-end;
         @include btn-style();
         width:100%;
@@ -158,6 +191,10 @@ section{
         background: $strongCyan;
         text-transform: uppercase;
         padding: .5em;
+
+        &:hover{
+            background: $hover;
+        }
     }
 }
 
