@@ -1,1 +1,139 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+}
+
+body {
+  background: hsl(185deg, 41%, 84%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  padding: 2em;
+}
+
+main {
+  max-width: 920px;
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 30px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+@media screen and (min-width: 700px) {
+  main {
+    flex-direction: row;
+  }
+  main .info-container, main .display-result-container {
+    width: 50%;
+  }
+}
+
+section {
+  margin-bottom: 1em;
+}
+
+.section-heading {
+  font-size: 16px;
+  color: hsl(186deg, 14%, 43%);
+}
+
+.input-container {
+  position: relative;
+}
+.input-container img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.5em;
+}
+.input-container .input-field {
+  background: hsl(189deg, 41%, 97%);
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0.2em 0.5em;
+}
+.input-container .input-field::-moz-placeholder {
+  text-align: right;
+  color: hsl(184deg, 14%, 56%);
+}
+.input-container .input-field::placeholder {
+  text-align: right;
+  color: hsl(184deg, 14%, 56%);
+}
+
+.select-tip-container .btns-container {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+.select-tip-container .btn {
+  width: 146px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+}
+.select-tip-container input {
+  width: 146px;
+  border: none;
+  border-radius: 5px;
+  background: hsl(189deg, 41%, 97%);
+}
+.select-tip-container input::-moz-placeholder {
+  color: hsl(184deg, 14%, 56%);
+}
+.select-tip-container input::placeholder {
+  color: hsl(184deg, 14%, 56%);
+}
+
+.result-container {
+  background: hsl(183deg, 100%, 15%);
+  border-radius: 30px;
+  padding: 1.5em 1em;
+  color: hsl(0deg, 0%, 100%);
+  margin-bottom: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.result-container p {
+  font-size: 0.6rem;
+  line-height: 0;
+}
+.result-container span {
+  color: hsl(184deg, 14%, 56%);
+  font-size: 0.5rem;
+}
+.result-container .tip-container, .result-container .total-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.result-container .tip-container .amount-container, .result-container .total-container .amount-container {
+  font-size: 2rem;
+  color: hsl(172deg, 67%, 45%);
+}
+.result-container .btn-reset {
+  justify-self: flex-end;
+  width: 146px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  color: hsl(183deg, 100%, 15%);
+  background: hsl(172deg, 67%, 45%);
+  text-transform: uppercase;
+  padding: 0.5em;
+}/*# sourceMappingURL=style.css.map */

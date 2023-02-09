@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+
+$ff-main: 'Space Mono', monospace;
+
+$veryDarkCyan:hsl(183, 100%, 15%);
+$darkGrayishCyan: hsl(186, 14%, 43%);
+$grayishCyan:hsl(184, 14%, 56%);
+$lightGrayishCyan: hsl(185, 41%, 84%);
+$veryLightGrayishCyan: hsl(189, 41%, 97%);
+$strongCyan: hsl(172, 67%, 45%);
+$white:hsl(0, 0%, 100%);
+
+@mixin btn-style{
+    width: 146px;
+    border: none;
+    border-radius: 5px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: $ff-main;
+    font-size: 24px;
+}
+
+body{
+    background: $lightGrayishCyan;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header{
+    padding: 2em;
+}
+
+main{
+    max-width: 920px;
+    background: $white;
+    border-radius: 30px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    @media screen and (min-width:700px) {
+        flex-direction: row;
+
+        .info-container,.display-result-container {
+            width: 50%;
+        }
+        
+    }
+}
+
+section{
+    margin-bottom: 1em;
+}
+
+.section-heading{
+    font-size: 16px;
+    color: $darkGrayishCyan;
+}
+
+.input-container{
+    position: relative;
+
+    img{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: .5em;
+        
+    }
+
+    .input-field{
+        background: $veryLightGrayishCyan;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        padding: .2em .5em;
+
+        &::placeholder{
+            text-align: right;
+            color: $grayishCyan;
+        }
+    }
+}
+
+.select-tip-container{
+    .btns-container{
+        display: flex;
+        gap: .5em;
+        flex-wrap: wrap;
+    }
+
+    .btn{
+        @include btn-style();
+        cursor: pointer;
+        background: $veryDarkCyan;
+        color: $white;
+    }
+
+    input{
+        @include btn-style();
+        background: $veryLightGrayishCyan;
+        
+        &::placeholder{
+            color: $grayishCyan;
+        }
+    }
+}
+
+
+.result-container{
+    background: $veryDarkCyan;
+    border-radius: 30px;
+    padding: 1.5em 1em;
+    color: $white;
+    margin-bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    p{
+        font-size: .6rem;
+        line-height: 0;
+    }
+
+    span{
+        color: $grayishCyan;
+        font-size: .5rem;
+    } 
+
+
+    .tip-container, .total-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1em;
+
+        .amount-container{
+            font-size: 2rem;
+            color: $strongCyan;
+        }
+    }
+
+    .btn-reset{
+        justify-self: flex-end;
+        @include btn-style();
+        width:100%;
+        
+        color: $veryDarkCyan;
+        background: $strongCyan;
+        text-transform: uppercase;
+        padding: .5em;
+    }
+}
+
+
+

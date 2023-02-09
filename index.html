@@ -14,60 +14,71 @@
     </header>
 
     <main>
-        <section class="bill-container">
-            <span class="section-heading">
-                Bill
-            </span>
-            <div class="input-container">
-                <input type="text" placeholder="0" class="input-field">
-                <img src="./images/icon-dollar.svg" alt="dollar">
-            </div>
-            
-        </section>
-
-        <section class="select-tip-container">
-            <span class="section-heading">
-                Select Tip %
-            </span>
-            <button class="tip-percentage-btn"> 5%</button>
-            <button class="tip-percentage-btn"> 10%</button>
-            <button class="tip-percentage-btn"> 15%</button>
-            <button class="tip-percentage-btn"> 25%</button>
-            <button class="tip-percentage-btn"> 50%</button>
-            <input type="text" placeholder="Custom">
-        </section>
-
-        <section class="number-people-container">
-            <span class="section-heading">Number of People</span>
-            <div class="input-container">
-                <input type="text" placeholder="0" class="input-field">
-                <img src="./images/icon-person.svg" alt="dollar">
-            </div>
-        </section>
-
-        <section class="result-container">
-            <div class="tip-container">
-                <div class="description">
-                    <p>Tip amount</p>
-                    <span>/ person</span>
+        <div class="info-container">
+            <section class="bill-container">
+                <span class="section-heading">
+                    Bill
+                </span>
+                <div class="input-container">
+                    <input type="text" placeholder="0" class="input-field">
+                    <img src="./images/icon-dollar.svg" alt="dollar">
                 </div>
-
-                <div class="amount-container">
-                    $ 0.0
+                
+            </section>
+    
+            <section class="select-tip-container">
+                <span class="section-heading">
+                    Select Tip %
+                </span>
+                <div class="btns-container">
+                    <button class="btn"> 5%</button>
+                    <button class="btn"> 10%</button>
+                    <button class="btn"> 15%</button>
+                    <button class="btn"> 25%</button>
+                    <button class="btn"> 50%</button>
+                    <input type="text" placeholder="Custom">
                 </div>
-            </div>
-
-            <div class="total-container">
-                <div class="description">
-                    <p>Total</p>
-                    <span>/ person</span>
+            </section>
+    
+            <section class="number-people-container">
+                <span class="section-heading">Number of People</span>
+                <div class="input-container">
+                    <input type="text" placeholder="0" class="input-field">
+                    <img src="./images/icon-person.svg" alt="dollar">
                 </div>
-
-                <div class="amount-container">
-                    $ 0.0
+            </section>
+        </div>
+        
+        <div class="display-result-container">
+            <section class="result-container">
+                <div class="tip-total-container">
+                    <div class="tip-container">
+                        <div class="description">
+                            <p>Tip amount</p>
+                            <span>/ person</span>
+                        </div>
+        
+                        <div class="amount-container">
+                            $ 0.0
+                        </div>
+                    </div>
+        
+                    <div class="total-container">
+                        <div class="description">
+                            <p>Total</p>
+                            <span>/ person</span>
+                        </div>
+        
+                        <div class="amount-container">
+                            $ 0.0
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+                
+                <button class="btn-reset">reset</button>
+            </section>
+        </div>
+        
     </main>
 </body>
 <script src="./index.js"></script>
