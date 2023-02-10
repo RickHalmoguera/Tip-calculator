@@ -27,11 +27,11 @@ Users should be able to:
 
 ### Screenshot
 
-##Desktop
+## Desktop
 ![](./images/screenshot.png)
-##Mobile
+## Mobile
 ![](./images/screenshot2.png)
-##Working app
+## Working app
 ![](./images/screenshot3.png)
 
 ### Links
