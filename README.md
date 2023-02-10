@@ -27,9 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop](./images/screenshot.png)
-![Mobile](./images/screenshot2.png)
-![Working app](./images/screenshot3.png)
+#Desktop
+![](./images/screenshot.png)
+#Mobile
+![](./images/screenshot2.png)
+#Working app
+![](./images/screenshot3.png)
 
 ### Links
 
